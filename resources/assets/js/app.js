@@ -11,7 +11,11 @@ window.Vue = require('vue');
 
 import VueRouter from 'vue-router'
 
+import App from './components/App'
+
 Vue.use(VueRouter)
+
+Vue.component('app',App)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

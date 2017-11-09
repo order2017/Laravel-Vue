@@ -58,9 +58,9 @@
                     name : this.name,
                     email : this.email,
                     password : this.password
-                }
+                };
                 axios.post('/api/register',formData).then(response => {
-                    console.log("register success")
+                    this.$router.push({name:'confirm'})
                 })
             }
         }

@@ -3714,8 +3714,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_router__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_App__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_App___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_App__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vee_validate__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vee_validate_dist_locale_zh_CN__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vee_validate_dist_locale_zh_CN___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vee_validate_dist_locale_zh_CN__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vee_validate__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes__ = __webpack_require__(46);
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -3733,9 +3735,13 @@ window.Vue = __webpack_require__(37);
 
 
 
+
 Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]);
 
-Vue.use(__WEBPACK_IMPORTED_MODULE_2_vee_validate__["a" /* default */]);
+__WEBPACK_IMPORTED_MODULE_3_vee_validate__["a" /* Validator */].localize('zh_CN', __WEBPACK_IMPORTED_MODULE_2_vee_validate_dist_locale_zh_CN___default.a);
+Vue.use(__WEBPACK_IMPORTED_MODULE_3_vee_validate__["b" /* default */], {
+  locale: 'zh_CN'
+});
 
 Vue.component('app', __WEBPACK_IMPORTED_MODULE_1__components_App___default.a);
 
@@ -3749,7 +3755,7 @@ Vue.component('app', __WEBPACK_IMPORTED_MODULE_1__components_App___default.a);
 
 var app = new Vue({
   el: '#app',
-  router: __WEBPACK_IMPORTED_MODULE_3__routes__["a" /* default */]
+  router: __WEBPACK_IMPORTED_MODULE_4__routes__["a" /* default */]
 });
 
 /***/ }),
@@ -46755,7 +46761,7 @@ if (false) {
 /* unused harmony export directive */
 /* unused harmony export mixin */
 /* unused harmony export mapFields */
-/* unused harmony export Validator */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Validator; });
 /* unused harmony export ErrorBag */
 /* unused harmony export Rules */
 /* unused harmony export version */
@@ -53421,8 +53427,14 @@ var index_esm = {
 };
 
 
-/* harmony default export */ __webpack_exports__["a"] = (index_esm);
+/* harmony default export */ __webpack_exports__["b"] = (index_esm);
 
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(n,e){ true?module.exports=e():"function"==typeof define&&define.amd?define(e):(n.__vee_validate_locale__zh_CN=n.__vee_validate_locale__zh_CN||{},n.__vee_validate_locale__zh_CN.js=e())}(this,function(){"use strict";var n=function(n){var e=0===(n=1024*Number(n))?0:Math.floor(Math.log(n)/Math.log(1024));return 1*(n/Math.pow(1024,e)).toFixed(2)+" "+["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"][e]},e={name:"zh_CN",messages:{after:function(n,e){return" "+n+"必须在"+e[0]+"之后"},alpha_dash:function(n){return" "+n+"能够包含字母数字字符，包括破折号、下划线"},alpha_num:function(n){return n+" 只能包含字母数字字符."},alpha_spaces:function(n){return" "+n+" 只能包含字母字符，包括空格."},alpha:function(n){return" "+n+" 只能包含字母字符."},before:function(n,e){return" "+n+" 必须在"+e[0]+" 之前."},between:function(n,e){return" "+n+" 必须在"+e[0]+" "+e[1]+"之间."},confirmed:function(n,e){return" "+n+" 不能和"+e[0]+"匹配."},date_between:function(n,e){return" "+n+"必须在"+e[0]+"和"+e[1]+"之间."},date_format:function(n,e){return" "+n+"必须在在"+e[0]+"格式中."},decimal:function(n,e){void 0===e&&(e=[]);var t=e[0];return void 0===t&&(t="*")," "+n+" 必须是数字的而且能够包含"+("*"===t?"":t)+" 小数点."},digits:function(n,e){return" "+n+" 必须是数字，且精确到 "+e[0]+"数"},dimensions:function(n,e){return" "+n+"必须是 "+e[0]+" 像素到 "+e[1]+" 像素."},email:function(n){return" "+n+" 必须是有效的邮箱."},ext:function(n){return" "+n+" 必须是有效的文件."},image:function(n){return" "+n+" 必须是图片."},in:function(n){return" "+n+" 必须是一个有效值."},ip:function(n){return" "+n+" 必须是一个有效的地址."},max:function(n,e){return" "+n+" 不能大于"+e[0]+"字符."},max_value:function(n,e){return" "+n+" 必须小于或等于"+e[0]+"."},mimes:function(n){return" "+n+" 必须是有效的文件类型."},min:function(n,e){return" "+n+" 必须至少有 "+e[0]+" 字符."},min_value:function(n,e){return" "+n+" 必须大于或等于"+e[0]+"."},not_in:function(n){return" "+n+"必须是一个有效值."},numeric:function(n){return" "+n+" 只能包含数字字符."},regex:function(n){return" "+n+" 格式无效."},required:function(n){return n+" 是必须的."},size:function(e,t){var r=t[0];return" "+e+" 必须小于 "+n(r)+"."},url:function(n){return" "+n+"不是有效的url."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.addLocale(e),e});
 
 /***/ })
 /******/ ]);

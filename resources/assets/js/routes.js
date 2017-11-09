@@ -14,9 +14,14 @@ let routes = [
 		path: '/posts/:id',
 		name: 'posts',
 		component: require('./components/posts/Post')
-	}
+	},
+    {
+        path: '/register',
+        name: 'register',
+        component: require('./components/register/Register')
+    }
 
-]
+];
 
 export default new VueRouter({
 	

@@ -16,6 +16,11 @@ let routes = [
 		component: require('./components/posts/Post')
 	},
     {
+        path: '/login',
+        name: 'login',
+        component: require('./components/login/Login')
+    },
+    {
         path: '/register',
         name: 'register',
         component: require('./components/register/Register')

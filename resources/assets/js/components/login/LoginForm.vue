@@ -45,15 +45,11 @@
         methods:{
             login() {
                 let formData = {
-                    client_id: '2',
-                    client_secret: 'xnIg5wbQeZoFtCrpB5jstlY8zlhDZ91Y3GxUJZUi',
-					grant_type: 'password',
-					scope: '',
-                    username : this.email,
+                    email: this.email,
                     password : this.password
                 };
-                axios.post('/oauth/token',formData).then(response => {
-                    JWToken.setToken(response.data.access_token);
+                axios.post('/api/login',formData).then(response => {
+                    JWToken.setToken(response.data.token);
 					console.log(response.data);
                     //this.$router.push({name:'confirm'})
                 })
